@@ -77,7 +77,7 @@ export default function RootLayout({
         <link href="https://fonts.cdnfonts.com/css/altruism" rel="stylesheet" />
       </head>
       <body className="antialiased bg-black min-h-screen flex flex-col">
-        <div className="flex-1 relative flex overflow-hidden">
+        <div className="flex-1 relative flex">
           {/* Left Gutter for symmetry - Reserved space to keep content perfectly centered */}
           <div className="hidden md:block w-48 lg:w-64 shrink-0 pointer-events-none z-0" />
 
