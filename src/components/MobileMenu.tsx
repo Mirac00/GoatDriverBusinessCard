@@ -38,7 +38,7 @@ export function MobileMenu() {
                 }}
                 aria-label="Menu"
             >
-                <div className="flex flex-col items-center gap-1.5">
+                <div className="flex flex-col items-center gap-1.5 scale-[0.85]">
                     <div className="flex flex-col gap-1">
                         <motion.span
                             animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}

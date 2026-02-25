@@ -27,9 +27,9 @@ export function Logo() {
             <div className="absolute inset-0 flex items-center justify-center p-4">
                 <div className="relative w-full h-full flex items-center justify-center">
                     <img
-                        src="/logo.ico"
+                        src="/logo.png"
                         alt="GOATDRIVER Logo"
-                        className="w-[100px] h-[100px] object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] filter brightness-110"
+                        className="w-[102px] h-[102px] object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]"
                     />
                 </div>
             </div>

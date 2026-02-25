@@ -72,9 +72,13 @@
   }
 
   h1 {
-    @apply font-black;
-    line-height: 0.8;
-    font-size: clamp(48px, 12vw, 110px);
+    font-size: clamp(2.8rem, 12vw, 8rem);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+    font-family: 'Altruism', sans-serif;
+    margin-bottom: 2rem;
   }
 
   h2 {
