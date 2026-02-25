@@ -77,20 +77,23 @@ export default function RootLayout({
         <link href="https://fonts.cdnfonts.com/css/altruism" rel="stylesheet" />
       </head>
       <body className="antialiased bg-black min-h-screen flex flex-col">
-        <div className="flex-1 relative flex">
+        <div className="flex-1 relative flex overflow-hidden">
           {/* Left Gutter for symmetry - Reserved space to keep content perfectly centered */}
-          <div className="hidden md:block w-48 lg:w-64 shrink-0 pointer-events-none" />
+          <div className="hidden md:block w-48 lg:w-64 shrink-0 pointer-events-none z-0" />
 
-          <div className="flex-1 relative z-10 min-w-0">
+          {/* Main Content Area */}
+          <main className="flex-1 relative z-10 min-w-0">
             {children}
-          </div>
+          </main>
 
           {/* Right Sidebar Gutter - Sticky Navigation Area */}
-          <div className="hidden md:block w-48 lg:w-64 shrink-0 relative">
-            <div className="sticky top-0 h-screen w-full flex items-center justify-end pr-10">
-              <NavigationMenu />
+          <aside className="hidden md:block w-48 lg:w-64 shrink-0 relative z-[100]">
+            <div className="sticky top-0 h-screen w-full flex items-center justify-end pr-10 pointer-events-none">
+              <div className="pointer-events-auto">
+                <NavigationMenu />
+              </div>
             </div>
-          </div>
+          </aside>
         </div>
         {/* Global Footer - Full Width */}
         <footer className="w-full py-12 border-t border-white/10 bg-black/98 px-8 relative z-50">

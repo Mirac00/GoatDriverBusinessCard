@@ -15,6 +15,7 @@ const sections = [
 export function NavigationMenu() {
     const [activeSection, setActiveSection] = useState(0);
     const [scrollbarHeight, setScrollbarHeight] = useState(600);
+    const [isMounted, setIsMounted] = useState(false);
     const sliderHeight = 64; // Height of the "capsule" slider
     const CLEARANCE = 140; // Clearance above and below to match footer height
 
@@ -25,6 +26,7 @@ export function NavigationMenu() {
     }, [scrollbarHeight]);
 
     useEffect(() => {
+        setIsMounted(true);
         const updateHeight = () => {
             // Scale scrollbar height: available screen minus double clearance for symmetry
             const h = Math.max(window.innerHeight - (2 * CLEARANCE), 200);
@@ -70,9 +72,11 @@ export function NavigationMenu() {
         }
     };
 
+    if (!isMounted) return null;
+
     return (
         <div
-            className="relative z-[60] flex items-center"
+            className="relative z-[100] flex items-center"
             style={{
                 height: `${scrollbarHeight}px`,
             }}
