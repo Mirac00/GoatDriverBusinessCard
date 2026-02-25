@@ -77,16 +77,16 @@ export default function RootLayout({
         <link href="https://fonts.cdnfonts.com/css/altruism" rel="stylesheet" />
       </head>
       <body className="antialiased bg-black min-h-screen flex flex-col">
-        <div className="flex-1 relative">
-          {/* Sticky Sidebar Container */}
-          <div className="absolute top-0 right-0 h-full pointer-events-none hidden md:block">
-            <div className="sticky top-0 h-screen pointer-events-none border-0 overflow-hidden">
-              <NavigationMenu />
-            </div>
+        <div className="flex-1 relative flex">
+          <div className="flex-1 relative z-10">
+            {children}
           </div>
 
-          <div className="relative z-10">
-            {children}
+          {/* Sticky Sidebar Gutter - Reserved space for Navigation */}
+          <div className="hidden md:block w-48 lg:w-64 relative border-0">
+            <div className="sticky top-0 h-screen w-full flex items-center justify-center">
+              <NavigationMenu />
+            </div>
           </div>
         </div>
         {/* Global Footer - Full Width */}
