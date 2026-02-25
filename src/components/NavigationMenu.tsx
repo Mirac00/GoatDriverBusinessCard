@@ -72,13 +72,13 @@ export function NavigationMenu() {
 
     return (
         <div
-            className="fixed right-10 z-[60] hidden md:flex items-center gap-6"
+            className="absolute right-0 top-0 bottom-0 z-[60] flex items-center gap-6 pointer-events-none"
             style={{
-                top: `${CLEARANCE}px`,
-                bottom: `${CLEARANCE}px`
+                paddingTop: `${CLEARANCE}px`,
+                paddingBottom: `${CLEARANCE}px`
             }}
         >
-            <div className="relative flex flex-col items-end gap-0 h-full justify-center">
+            <div className="relative flex flex-col items-end gap-0 h-full justify-center pointer-events-auto pr-10">
                 <div className="relative" style={{ height: `${scrollbarHeight}px` }}>
                     {/* Main vertical line track */}
                     <div

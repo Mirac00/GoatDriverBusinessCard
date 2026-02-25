@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { siteData } from "@/data/data";
+import { NavigationMenu } from "@/components/NavigationMenu";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://goatdriver.pl'),
@@ -76,8 +77,17 @@ export default function RootLayout({
         <link href="https://fonts.cdnfonts.com/css/altruism" rel="stylesheet" />
       </head>
       <body className="antialiased bg-black min-h-screen flex flex-col">
-        <div className="flex-1">
-          {children}
+        <div className="flex-1 relative">
+          {/* Sticky Sidebar Container */}
+          <div className="absolute top-0 right-0 h-full pointer-events-none hidden md:block">
+            <div className="sticky top-0 h-screen pointer-events-none border-0 overflow-hidden">
+              <NavigationMenu />
+            </div>
+          </div>
+
+          <div className="relative z-10">
+            {children}
+          </div>
         </div>
         {/* Global Footer - Full Width */}
         <footer className="w-full py-12 border-t border-white/10 bg-black/98 px-8 relative z-50">
