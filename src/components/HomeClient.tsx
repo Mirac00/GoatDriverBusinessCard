@@ -378,14 +378,6 @@ export function HomeClient({ siteData }: HomeClientProps) {
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="relative py-12 border-t border-white/10 bg-black/98 px-8">
-                <div className="max-w-7xl mx-auto text-center">
-                    <p className="text-gray-500 text-[10px] md:text-xs tracking-[0.25em] font-black opacity-50 uppercase p-4 m-0">
-                        {siteData.footer.copyright}
-                    </p>
-                </div>
-            </footer>
         </div>
     );
 }
