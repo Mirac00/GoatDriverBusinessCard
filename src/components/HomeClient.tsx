@@ -48,7 +48,7 @@ export function HomeClient({ siteData }: HomeClientProps) {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1.2 }}
-                    className="text-center z-10 flex flex-col items-center"
+                    className="text-center z-10 flex flex-col items-center pb-20 md:pb-0"
                 >
                     <div className="mb-4 scale-[0.8] md:scale-100">
                         <Logo />
