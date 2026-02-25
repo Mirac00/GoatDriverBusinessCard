@@ -72,12 +72,12 @@ export function NavigationMenu() {
 
     return (
         <div
-            className="relative z-[60] flex items-center gap-6"
+            className="relative z-[60] flex items-center"
             style={{
                 height: `${scrollbarHeight}px`,
             }}
         >
-            <div className="relative flex flex-col items-end gap-0 h-full justify-center pr-10">
+            <div className="relative flex flex-col items-end gap-0 h-full justify-center">
                 <div className="relative w-full" style={{ height: `${scrollbarHeight}px` }}>
                     {/* Main vertical line track */}
                     <div

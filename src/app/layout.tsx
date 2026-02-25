@@ -78,13 +78,16 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-black min-h-screen flex flex-col">
         <div className="flex-1 relative flex">
-          <div className="flex-1 relative z-10">
+          {/* Left Gutter for symmetry - Reserved space to keep content perfectly centered */}
+          <div className="hidden md:block w-48 lg:w-64 shrink-0 pointer-events-none" />
+
+          <div className="flex-1 relative z-10 min-w-0">
             {children}
           </div>
 
-          {/* Sticky Sidebar Gutter - Reserved space for Navigation */}
-          <div className="hidden md:block w-48 lg:w-64 relative border-0">
-            <div className="sticky top-0 h-screen w-full flex items-center justify-center">
+          {/* Right Sidebar Gutter - Sticky Navigation Area */}
+          <div className="hidden md:block w-48 lg:w-64 shrink-0 relative">
+            <div className="sticky top-0 h-screen w-full flex items-center justify-end pr-10">
               <NavigationMenu />
             </div>
           </div>
