@@ -37,7 +37,7 @@ export function HomeClient({ siteData }: HomeClientProps) {
     };
 
     return (
-        <div className="min-h-screen bg-transparent text-white overflow-x-hidden relative z-10" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+        <div className="min-h-screen bg-transparent text-white overflow-x-hidden relative z-10 md:pr-48 lg:pr-64" style={{ fontFamily: "'Orbitron', sans-serif" }}>
             <ScrollVideo />
             <NavigationMenu />
             <MobileMenu />
