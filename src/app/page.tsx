@@ -37,7 +37,7 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'GOATDRIVER - Maciej Kozieł',
-    image: 'https://goatdriver.pl/og-image.jpg', // Placeholder, but valid schema
+    image: 'https://goatdriver.pl/logo.ico',
     '@id': 'https://goatdriver.pl',
     url: 'https://goatdriver.pl',
     telephone: siteData.contact.phone,
