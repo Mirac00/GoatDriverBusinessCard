@@ -16,6 +16,7 @@ export function NavigationMenu() {
     const [activeSection, setActiveSection] = useState(0);
     const [scrollbarHeight, setScrollbarHeight] = useState(600);
     const sliderHeight = 64; // Height of the "capsule" slider
+    const CLEARANCE = 140; // Clearance above and below to match footer height
 
     // Calculate position for a given section index
     const getPositionForIndex = useCallback((index: number) => {
@@ -25,8 +26,8 @@ export function NavigationMenu() {
 
     useEffect(() => {
         const updateHeight = () => {
-            // Scale scrollbar height based on window, cap at 700px
-            const h = Math.min(window.innerHeight * 0.7, 700);
+            // Scale scrollbar height: available screen minus double clearance for symmetry
+            const h = Math.max(window.innerHeight - (2 * CLEARANCE), 200);
             setScrollbarHeight(h);
         };
         updateHeight();
@@ -70,8 +71,14 @@ export function NavigationMenu() {
     };
 
     return (
-        <div className="fixed right-10 top-1/2 -translate-y-1/2 z-[60] hidden md:flex items-center gap-6">
-            <div className="relative flex flex-col items-end gap-0">
+        <div
+            className="fixed right-10 z-[60] hidden md:flex items-center gap-6"
+            style={{
+                top: `${CLEARANCE}px`,
+                bottom: `${CLEARANCE}px`
+            }}
+        >
+            <div className="relative flex flex-col items-end gap-0 h-full justify-center">
                 <div className="relative" style={{ height: `${scrollbarHeight}px` }}>
                     {/* Main vertical line track */}
                     <div
