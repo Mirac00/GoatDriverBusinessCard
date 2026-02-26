@@ -81,7 +81,7 @@ export function HomeClient({ siteData }: HomeClientProps) {
                         </h1>
                     </div>
 
-                    <div className="mt-6 text-[8px] md:text-[9px] tracking-[0.4em] uppercase text-gray-400 space-x-6 font-bold opacity-70 p-2">
+                    <div className="mt-6 text-[8px] md:text-[9px] 2xl:text-[12px] tracking-[0.4em] uppercase text-gray-400 space-x-6 font-bold opacity-70 p-2">
                         <span className="px-2">{siteData.hero.services_label}</span>
                         <span className="px-2">{siteData.hero.name_label}</span>
                     </div>
@@ -92,7 +92,7 @@ export function HomeClient({ siteData }: HomeClientProps) {
                     transition={{ repeat: Infinity, duration: 2.5 }}
                     className="absolute bottom-8 text-[#e6000b]"
                 >
-                    <div className="text-[8px] tracking-[0.2em] font-black p-2">{siteData.hero.scroll_label}</div>
+                    <div className="text-[8px] 2xl:text-[10px] tracking-[0.2em] font-black p-2">{siteData.hero.scroll_label}</div>
                     <div className="w-px h-10 bg-gradient-to-b from-[#e6000b] via-[#e6000b] to-transparent mx-auto mt-2 shadow-[0_0_6px_#e6000b]" />
                 </motion.div>
             </section>
@@ -143,7 +143,7 @@ export function HomeClient({ siteData }: HomeClientProps) {
 
             {/* MOJE USŁUGI */}
             <section id="services" className="relative min-h-screen flex items-center justify-center px-8 py-24">
-                <div className="max-w-[1100px] mx-auto w-full">
+                <div className="max-w-[1100px] 2xl:max-w-[1400px] mx-auto w-full">
                     <motion.h2
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -198,7 +198,7 @@ export function HomeClient({ siteData }: HomeClientProps) {
 
             {/* PROJEKTY */}
             <section id="projects" className="relative min-h-screen flex items-center justify-center px-8 py-24">
-                <div className="max-w-[1100px] mx-auto w-full">
+                <div className="max-w-[1100px] 2xl:max-w-[1400px] mx-auto w-full">
                     <motion.h2
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -243,7 +243,7 @@ export function HomeClient({ siteData }: HomeClientProps) {
 
             {/* OPINIE */}
             <section id="reviews" className="relative min-h-screen flex items-center justify-center px-8 py-24">
-                <div className="max-w-[1100px] mx-auto w-full">
+                <div className="max-w-[1100px] 2xl:max-w-[1400px] mx-auto w-full">
                     <motion.h2
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -299,7 +299,7 @@ export function HomeClient({ siteData }: HomeClientProps) {
 
             {/* KONTAKT */}
             <section id="contact" className="relative min-h-screen flex items-center justify-center px-8 py-24">
-                <div className="max-w-4xl mx-auto w-full">
+                <div className="max-w-4xl 2xl:max-w-6xl mx-auto w-full">
                     <motion.h2
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
