@@ -90,7 +90,7 @@ export const siteData = {
         hours: "Pon-Pt 8:00-18:00, Sob 9:00-14:00"
     },
     footer: {
-        copyright: "© 2026 GOATDRIVER - MACIEJ KOZIEŁ. WSZYSTKIE PRAWA ZASTRZEŻONE."
+        copyright: "© 2026 GOATDRIVER - MACIEJ KOZIEŁ. Powered by SocialBrand.house"
     },
     video: {
         url: "/video/film.mp4"
