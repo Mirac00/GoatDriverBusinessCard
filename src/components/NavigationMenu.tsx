@@ -110,7 +110,7 @@ export function NavigationMenu() {
                                         opacity: isActive ? 1 : 0.6,
                                         scale: isActive ? 1.05 : 1
                                     }}
-                                    className="mr-6 text-[10px] tracking-[0.3em] font-black uppercase whitespace-nowrap"
+                                    className="mr-6 text-[10px] md:text-[10.5px] tracking-[0.3em] font-black uppercase whitespace-nowrap"
                                     style={{
                                         fontFamily: 'Orbitron, sans-serif',
                                         textShadow: isActive ? '0 0 15px rgba(230, 0, 11, 0.6)' : 'none'

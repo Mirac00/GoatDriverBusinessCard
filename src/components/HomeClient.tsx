@@ -22,7 +22,9 @@ interface HomeClientProps {
 
 export function HomeClient({ siteData }: HomeClientProps) {
     const headerGlow = {
-        textShadow: '0 0 4px #e6000b, 0 0 8px #e6000b, 0 0 16px rgba(230, 0, 11, 0.3)',
+        fontFamily: "'Orbitron', sans-serif",
+        fontWeight: 300,
+        textShadow: '0 0 4px #e6000b, 0 0 8px #e6000b, 0 0 16px rgba(230, 0, 11, 0.4)',
         color: '#e6000b'
     };
 
@@ -53,19 +55,19 @@ export function HomeClient({ siteData }: HomeClientProps) {
                     </div>
 
                     <div className="mt-8 relative">
-                        <h1 className="leading-[0.75] px-4" style={{ fontFamily: 'Altruism, sans-serif', letterSpacing: '-0.06em' }}>
-                            <span className="text-white px-1" style={{ textShadow: '0px 0px 4px rgba(255,255,255,0.6)' }}>
+                        <h1 className="leading-[0.75] px-4" style={{ fontFamily: 'Altruism, sans-serif', fontWeight: 300, letterSpacing: '-0.06em' }}>
+                            <span className="text-white px-1" style={{ textShadow: '0 0 4px #ffffff, 0 0 8px #ffffff, 0 0 16px rgba(255,255,255,0.4)' }}>
                                 {siteData.hero.title.goat}
                             </span>
                             <motion.span
                                 className="text-[#e6000b] px-1"
-                                style={{ textShadow: '0px 0px 8px #e6000b, 0px 0px 16px #e6000b' }}
+                                style={{ textShadow: '0 0 4px #e6000b, 0 0 8px #e6000b, 0 0 16px rgba(230,0,11,0.4)' }}
                                 animate={{
                                     opacity: [1, 0.75, 1],
                                     textShadow: [
-                                        '0px 0px 8px #e6000b, 0px 0px 16px #e6000b',
-                                        '0px 0px 14px #e6000b, 0px 0px 28px #e6000b',
-                                        '0px 0px 8px #e6000b, 0px 0px 16px #e6000b'
+                                        '0 0 4px #e6000b, 0 0 8px #e6000b, 0 0 16px rgba(230,0,11,0.4)',
+                                        '0 0 8px #e6000b, 0 0 16px #e6000b, 0 0 24px rgba(230,0,11,0.6)',
+                                        '0 0 4px #e6000b, 0 0 8px #e6000b, 0 0 16px rgba(230,0,11,0.4)'
                                     ]
                                 }}
                                 transition={{
