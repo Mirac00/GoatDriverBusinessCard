@@ -5,6 +5,7 @@ import { ScrollVideo } from '@/components/ScrollVideo';
 import { MobileMenu } from '@/components/MobileMenu';
 import { Mail, Phone, MapPin, Wrench, Settings, Zap } from 'lucide-react';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 /**
  * A wrapper component that ensures all children have consistent internal padding
@@ -220,10 +221,12 @@ export function HomeClient({ siteData }: HomeClientProps) {
                                 viewport={{ once: true }}
                                 className="group relative overflow-hidden rounded-[20px] h-[400px] cursor-pointer"
                             >
-                                <img
+                                <Image
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end transform translate-y-6 group-hover:translate-y-0 transition-transform duration-700">
                                     <ContentWrapper className="gap-2">

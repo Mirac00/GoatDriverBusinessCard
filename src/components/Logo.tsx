@@ -1,6 +1,7 @@
 'use client';
 
 import { svgPaths } from '@/lib/svg-paths';
+import Image from 'next/image';
 
 export function Logo() {
     return (
@@ -26,9 +27,12 @@ export function Logo() {
             {/* Logo Image with Drop Shadow */}
             <div className="absolute inset-0 flex items-center justify-center p-4">
                 <div className="relative w-full h-full flex items-center justify-center">
-                    <img
+                    <Image
                         src="/logo.png"
                         alt="GOATDRIVER Logo"
+                        width={102}
+                        height={102}
+                        priority
                         className="w-[102px] h-[102px] object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]"
                     />
                 </div>

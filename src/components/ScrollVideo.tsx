@@ -2,7 +2,6 @@ import { useEffect, useRef, useCallback, useState } from 'react';
 import { siteData } from '@/data/data';
 
 const SECTION_IDS = ['hero', 'about', 'services', 'projects', 'reviews', 'contact'];
-const SECONDS_PER_SECTION = 5;
 
 export function ScrollVideo() {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -57,8 +56,9 @@ export function ScrollVideo() {
         // Cleanup previous listeners
         cleanupListeners();
 
+        const secondsPerSection = video.duration / SECTION_IDS.length;
         const isLastSection = sectionIndex === SECTION_IDS.length - 1;
-        const startTime = sectionIndex * SECONDS_PER_SECTION;
+        const startTime = sectionIndex * secondsPerSection;
 
         // Seek to the section's start time
         video.currentTime = Math.min(startTime, video.duration - 0.5);
@@ -74,9 +74,9 @@ export function ScrollVideo() {
             video.addEventListener('ended', handler);
             video.play().catch(() => { });
         } else {
-            // Non-last sections: play for SECONDS_PER_SECTION then pause
+            // Non-last sections: play for secondsPerSection then pause
             video.loop = false;
-            const endTime = startTime + SECONDS_PER_SECTION;
+            const endTime = startTime + secondsPerSection;
             const handler = () => {
                 if (video.currentTime >= endTime) {
                     video.pause();

@@ -77,6 +77,43 @@ export default function RootLayout({
         <link href="https://fonts.cdnfonts.com/css/altruism" rel="stylesheet" />
       </head>
       <body className="antialiased bg-black min-h-screen flex flex-col">
+        {/* JSON-LD Structured Data for Local SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AutoRepair",
+              "name": "GOATDRIVER",
+              "image": "https://goatdriver.pl/logo.png",
+              "@id": "https://goatdriver.pl",
+              "url": "https://goatdriver.pl",
+              "telephone": siteData.contact.phone,
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": siteData.contact.address.street,
+                "addressLocality": "Warszawa",
+                "postalCode": "00-000",
+                "addressCountry": "PL"
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "08:00",
+                  "closes": "18:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Saturday",
+                  "opens": "09:00",
+                  "closes": "14:00"
+                }
+              ],
+              "priceRange": "$$"
+            })
+          }}
+        />
         <div className="flex-1 relative flex">
           {/* Left Gutter for symmetry - Reserved space to keep content perfectly centered */}
           <div className="hidden md:block w-48 lg:w-64 shrink-0 pointer-events-none z-0" />
